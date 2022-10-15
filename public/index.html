@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Letter</title>
+
+    <style>
+      .header {
+        width: 100%;
+        text-align: center;
+      }
+
+      .main_content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        height: 30vh;
+        margin-bottom: 1.5em;
+      }
+
+      .main_content textarea {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #text,
+      #result_box {
+        width: 30%;
+        height: 100%;
+        padding: 0.5em;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #text:focus {
+        outline: 1px solid rgb(143, 143, 143);
+      }
+
+      #result_box {
+        overflow: auto;
+        overflow-wrap: anywhere;
+      }
+
+      #result_box p {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-size: 0.9em;
+      }
+
+      .secret_container {
+        margin-bottom: 1em;
+      }
+
+      .secret_container input {
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        padding: 1em;
+      }
+
+      .secret_container input:focus {
+        outline: 1px solid rgb(143, 143, 143);
+      }
+
+      .secret_container,
+      .btn_container {
+        width: 100%;
+        text-align: center;
+      }
+
+      button {
+        cursor: pointer;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      button:active {
+        transform: scale(0.98) translateY(2px);
+      }
+
+      .header {
+        margin-bottom: 3em;
+      }
+
+      .header h1,
+      h3 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to Encrypted Letter</h1>
+      <h3>Encrypt & Decrypt your Text in seconds!!</h3>
+    </header>
+
+    <main class="main_content">
+      <textarea
+        placeholder="Enter or Paste your text here....."
+        name="text"
+        id="text"
+      ></textarea>
+      <div id="result_box">
+        <p id="result"></p>
+      </div>
+    </main>
+
+    <div class="secret_container">
+      <input
+        type="password"
+        id="secret_key"
+        placeholder="Enter your Secret Key here....."
+      />
+    </div>
+
+    <div class="btn_container">
+      <button id="encrypt">Encrypt</button>
+      <button id="decrypt">Decrypt</button>
+      <button id="clear">Clear</button>
+      <button id="copy">Copy the Result</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
