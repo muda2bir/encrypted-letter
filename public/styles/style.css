@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Tinos:wght@400;700&display=swap");
+
+.header {
+  width: 100%;
+  text-align: center;
+}
+
+.main_content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 30vh;
+  margin-bottom: 2.5em;
+}
+
+.main_content textarea {
+  font-family: "Overpass", sans-serif;
+}
+
+#text,
+#result_box {
+  width: 30%;
+  height: 100%;
+  padding: 1.2em;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: "Overpass", sans-serif;
+}
+
+#text:focus {
+  outline: 1px solid rgb(143, 143, 143);
+}
+
+#result_box {
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+#result_box p {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.secret_container {
+  margin-bottom: 1em;
+}
+
+.secret_container input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 1em;
+  font-family: "Overpass", sans-serif;
+  width: 35%;
+}
+
+.secret_container input:focus {
+  outline: 1px solid rgb(143, 143, 143);
+}
+
+.secret_container,
+.btn_container {
+  width: 100%;
+  text-align: center;
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+button {
+  cursor: pointer;
+  font-family: "Overpass", sans-serif;
+  border: none;
+  outline: none;
+  background-color: #dddddd;
+  outline: 1px solid #ccc;
+  font-size: 1rem;
+  padding: 0.2em 1.2em;
+  border-radius: 5px;
+  box-shadow: 4px 7px 0px 0px rgb(0 0 0);
+}
+
+button:active {
+  transform: scale(0.98) translateY(2px);
+  box-shadow: 2px 4px 0px 0px rgb(0 0 0);
+}
+
+.header {
+  margin-bottom: 3em;
+}
+
+.header h1,
+h3 {
+  font-family: "Tinos", serif;
+  letter-spacing: 5px;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+@media screen and (max-width: 650px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header h3 {
+    font-size: 1rem;
+  }
+
+  .main_content {
+    flex-direction: column;
+    height: 65vh;
+  }
+
+  #text,
+  #result_box {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .secret_container input {
+    width: 85%;
+  }
+
+  .btn_container {
+    flex-wrap: wrap;
+  }
+
+  .container {
+    margin: 3rem 0;
+  }
+}

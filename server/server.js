@@ -24,7 +24,7 @@ app.post("/api/decrypt", (req, res) => {
   res.send({ decryptedText });
 });
 
-const port = process.env.PORT;
+const port = process.env.PORT || 1337;
 app.listen(port, (err) => {
   if (err) console.log(err);
 
