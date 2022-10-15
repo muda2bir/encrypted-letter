@@ -24,10 +24,9 @@ app.post("/api/decrypt", (req, res) => {
   res.send({ decryptedText });
 });
 
-const port = 8000;
-const hostname = "localhost";
-app.listen(port, hostname, (err) => {
+const port = process.env.PORT;
+app.listen(port, (err) => {
   if (err) console.log(err);
 
-  console.log(`Server is running on http://${hostname}:${port}`);
+  console.log(`Server is up`);
 });
